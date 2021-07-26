@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  node:
+    container_name: kueapa-express-app
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:3000"
+    links:
+      - mongo_db
+    volumes:
+      - .:/home/node/app
+
+  mongo_db:
+    container_name: kueapa-db
+    image: mongo
+    ports:
+      - "9090:27017"
+    volumes:
+      - /home/node/app/mongodb/
