@@ -4,7 +4,7 @@
   "description": "This is the technical test developed for the Javascript Fullstack position",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js --exec babel-node",
+    "dev": "nodemon src/app.js --exec babel-node",
     "build": "babel src --out-dir build",
     "start": "node build/index.js",
     "test": "jest"
@@ -29,6 +29,8 @@
     "helmet": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.3",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "socket.io": "^4.1.3",
+    "socket.io-client": "^4.1.3"
   }
 }

@@ -18,6 +18,7 @@ router.post(
   authCtrl.signUp
 );
 
+
 router.post("/signin", authCtrl.signIn);
 
 export default router;
